@@ -1,0 +1,22 @@
+﻿@model InstagramViewModel
+@{
+    Layout = null;
+}
+
+<form method="post">
+    <label>Kullanıcı adı</label>
+    <input type="text" asp-for="@Model.user.username" class="form-control"/>
+    <br />
+    <button class="btn btn-success">Tamam</button>
+</form>
+
+<table>
+    <tr>
+        <th>Takipçi</th>
+        <th>Takip Edilen</th>
+    </tr>
+        <tr>
+            <td>@ViewBag.Follower</td>
+            <td>@ViewBag.Following</td>
+        </tr>
+</table>
